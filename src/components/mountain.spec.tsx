@@ -21,7 +21,7 @@ const server = setupServer(
   })
 );
 
-describe("Hero", () => {
+describe("Mountain", () => {
   beforeAll(() => {
     server.listen();
   });
@@ -32,11 +32,6 @@ describe("Hero", () => {
 
   afterEach(() => {
     server.resetHandlers();
-  });
-
-  it("should render successfully", () => {
-    const { baseElement } = render(<Mountain />);
-    expect(baseElement).toBeTruthy();
   });
 
   it("should have a mountain detail", async () => {
@@ -50,7 +45,7 @@ describe("Hero", () => {
       ),
     });
     expect(
-      await findByText(/Aconcagua is a mountain in the Principal Cordillera/gi)
+      await findByText(/Aconcagua is a mountain in the Principal Cordillera/)
     ).toBeTruthy();
   });
 });

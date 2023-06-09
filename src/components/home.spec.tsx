@@ -42,6 +42,6 @@ describe("Home", () => {
     const { findByText } = render(<Home />, {
       wrapper: ({ children }) => <MemoryRouter>{children} </MemoryRouter>,
     });
-    expect(await findByText(/Aconcagua/gi)).toBeTruthy();
+    expect(await findByText(/Aconcagua/)).toBeTruthy();
   });
 });

@@ -17,9 +17,7 @@ export function Mountain() {
 
   return (
     <article>
-      <h3 className="p-5 text-center text-lg uppercase text-blue-900">
-        {mountain.title}
-      </h3>
+      <h3 className="p-5 text-lg uppercase text-blue-900">{mountain.title}</h3>
       <pre className="p-5 text-sm">{JSON.stringify(mountain, null, 2)}</pre>
     </article>
   );
