@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Hero from "src/components/hero";
+import Mountain from "src/components/mountain";
 import Home from "src/components/home";
 
 export function App() {
@@ -7,7 +7,7 @@ export function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}>
-          <Route path=":heroId" element={<Hero />}></Route>
+          <Route path=":mountainId" element={<Mountain />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
