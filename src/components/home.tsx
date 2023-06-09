@@ -13,9 +13,9 @@ export function Home() {
   return (
     <section className="h-screen overflow-hidden bg-green-900">
       <header className="m-0.5 flex bg-slate-600">
-        <div className="flex-auto p-5 text-left text-xl text-emerald-200">
+        <h1 className="flex-auto p-5 text-left text-xl text-emerald-200">
           StarWars-o-Pedia
-        </div>
+        </h1>
       </header>
       <nav></nav>
       <div className="flex h-screen">
