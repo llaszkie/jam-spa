@@ -9,14 +9,13 @@ const server = setupServer(
   rest.get("http://localhost:3000/mountains/aconcagua", (_, res, ctx) => {
     return res(
       ctx.status(200),
-      ctx.json([
-        {
-          title: "Aconcagua",
-          path: "/mountains/aconcagua",
-          description: "Aconcagua is a mountain in the Principal Cordillera",
-          id: "aconcagua",
-        },
-      ])
+      ctx.json({
+        title: "Aconcagua",
+        path: "/mountains/aconcagua",
+        description: "Aconcagua is a mountain in the Principal Cordillera",
+        height: "6,962 m",
+        id: "aconcagua",
+      })
     );
   })
 );
@@ -47,5 +46,6 @@ describe("Mountain", () => {
     expect(
       await findByText(/Aconcagua is a mountain in the Principal Cordillera/)
     ).toBeTruthy();
+    expect(await findByText(/6,962 m/)).toBeTruthy();
   });
 });

@@ -40,7 +40,7 @@ describe("Home", () => {
 
   it("should have a mountain list", async () => {
     const { findByText } = render(<Home />, {
-      wrapper: ({ children }) => <MemoryRouter>{children} </MemoryRouter>,
+      wrapper: ({ children }) => <MemoryRouter>{children}</MemoryRouter>,
     });
     expect(await findByText(/Aconcagua/)).toBeTruthy();
   });
